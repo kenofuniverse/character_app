@@ -2,9 +2,10 @@ export const MC_CHARACTERS_REQUEST = 'MC_CHARACTERS_REQUEST'
 export const MC_CHARACTERS_SUCCESS = 'MC_CHARACTERS_SUCCESS'
 export const MC_CHARACTERS_ERROR = 'MC_CHARACTERS_ERROR'
 
-export const charactersRequest = () => ({
+export const charactersRequest = (page) => ({
   type: MC_CHARACTERS_REQUEST,
   itemType: 'characters',
+  page
 })
 
 export const charactersSuccess = payload => ({

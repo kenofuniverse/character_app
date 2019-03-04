@@ -1,0 +1,12 @@
+.layout {
+  $self: &;
+
+  &__container {
+    padding-top: 30px;
+
+    #{ $self }__page-title {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}

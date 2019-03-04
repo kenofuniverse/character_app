@@ -5,12 +5,13 @@ import {
 } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import * as moment from 'moment'
+import '../styles/character-card.scss'
 
 const fromNow = (date) => moment(date).fromNow()
 
 const CharacterCard = ({item}) => (
-  <Card>
-    <Card.Img variant="top" src={item.image} />
+  <Card className="card">
+    <Card.Img variant="top" src={item.image} className="card__image" />
     <Card.Body>
       <Card.Title>
         <Link to={`/character/${item.id}`}>{item.name}</Link>
@@ -20,7 +21,7 @@ const CharacterCard = ({item}) => (
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">{fromNow(item.created)}</small>
+      <small className="text-muted">Created {fromNow(item.created)}</small>
     </Card.Footer>
   </Card>
 )

@@ -9,7 +9,7 @@ const Landing = ({characterList, loadCharacters}) => {
   }, []); // similar to componentDidMount
 
   return (
-    <Layout>
+    <Layout title="All the characters">
       <CharacterList items={characterList} />
     </Layout>
   )
