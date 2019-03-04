@@ -5,7 +5,7 @@ import CharacterList from './CharacterList'
 
 const Landing = ({characterList, loadCharacters}) => {
   useEffect(() => {
-    loadCharacters()
+    loadCharacters(1)
   }, []); // similar to componentDidMount
 
   return (

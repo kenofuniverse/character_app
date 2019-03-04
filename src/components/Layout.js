@@ -5,13 +5,13 @@ import Header from './Header'
 // import Footer from './Footer'
 
 const Layout = ({ children }) => (
-  <Container fluid={true}>
+  <div>
     <Header />
     <Container>
       {children}
     </Container>
     {/* <Footer /> */}
-  </Container>
+  </div>
 )
 
 Layout.propTypes = {

@@ -5,16 +5,18 @@ import {
 } from 'react-bootstrap'
 import CharacterCard from './CharacterCard'
 
-const CharacterList = (items) => (
-  <CardColumns>
-    { items.map((item, index) => (
-      <CharacterCard
-        key={index}
-        item={item}
-      />
-    )) }
-  </CardColumns>
-)
+const CharacterList = ({ items }) => {
+  return (
+    <CardColumns>
+      { items.map((item, index) => (
+        <CharacterCard
+          key={index}
+          item={item}
+        />
+      )) }
+    </CardColumns>
+  )
+}
 
 CharacterList.defaultProps = {
   items: []

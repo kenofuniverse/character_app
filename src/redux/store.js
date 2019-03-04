@@ -1,14 +1,7 @@
-import createHistory from 'history/createBrowserHistory'
-import { createStore } from 'redux'
-import rootReducer from './reducers'
+import configureStore from './configureStore'
+import rootSaga from './saga'
 
-export const history = createHistory()
-
-const initialState = {}
-
-const store = createStore(
-  rootReducer,
-  initialState
-);
+const store = configureStore({})
+store.runSaga(rootSaga)
 
 export default store
