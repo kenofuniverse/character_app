@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import App from './App'
+import LandingContainer from './containers/landing'
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <Route path="/" component={App} />
+      <Route path="/" component={LandingContainer} />
     </Router>
   </Provider>
 )

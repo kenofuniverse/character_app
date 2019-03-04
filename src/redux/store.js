@@ -1,14 +1,14 @@
-import createHistory from 'history/createBrowserHistory';
-import { createStore } from 'redux';
-import rootReducer from './reducers';
+import createHistory from 'history/createBrowserHistory'
+import { createStore } from 'redux'
+import rootReducer from './reducers'
 
-export const history = createHistory();
+export const history = createHistory()
 
-const initialState = {};
+const initialState = {}
 
 const store = createStore(
   rootReducer,
   initialState
 );
 
-export default store;
+export default store
