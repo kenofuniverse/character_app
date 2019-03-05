@@ -1,10 +1,11 @@
 import { connect } from 'react-redux'
-import { charactersRequest } from '../../redux/actions/characters'
-import Landing from '../../components/Landing'
+import { charactersRequest } from '../redux/actions/characters'
+import Landing from '../components/Landing'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    characterList: state.characters.results
+    characterList: state.characters.results,
+    pageInfo: state.characters.info
   }
 }
 

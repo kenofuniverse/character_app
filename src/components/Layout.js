@@ -9,9 +9,7 @@ const Layout = ({ title, children }) => (
   <div className="layout">
     <Header/>
     <Container className="layout__container">
-      <h1 className="layout__page-title">
-        {title}
-      </h1>
+      
       {children}
     </Container>
     {/* <Footer /> */}
@@ -20,7 +18,7 @@ const Layout = ({ title, children }) => (
 
 Layout.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.object,
+  children: PropTypes.any,
 }
 
 export default Layout
