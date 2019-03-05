@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="navbar navbar-expand navbar-dark bg-dark"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+      onClick={[Function]}
+    >
+      Milo Credit Test
+    </a>
+    <div
+      className="mr-auto navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </div>
+    <form
+      className="form-inline"
+      onSubmit={[Function]}
+    >
+      <input
+        className="mr-sm-2 form-control"
+        onChange={[Function]}
+        placeholder="Search Chracters"
+        type="text"
+        value=""
+      />
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+</nav>
+`;

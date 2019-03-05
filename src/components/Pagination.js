@@ -25,9 +25,9 @@ const PaginationButons = ({ current, total, onClickItem }) => (
       disabled={current <= 1}
       onClick={() => onClickItem(current - 1)}
     />
-    {generatePageNumbers(total, current).map((page, index) => (
+    {generatePageNumbers(total, current).map(page => (
       <Pagination.Item
-        key={index}
+        key={page}
         active={page === current}
         onClick={() => onClickItem(page)}
       >

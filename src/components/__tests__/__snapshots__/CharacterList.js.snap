@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="card-columns"
+>
+  <div
+    className="card card"
+  >
+    <img
+      className="card-img-top card__image"
+      src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        <a
+          href="/character/1"
+          onClick={[Function]}
+        >
+          Rick Sanchez
+        </a>
+      </div>
+      <p
+        className="card-text"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-8"
+        >
+          <small
+            className="text-muted"
+          >
+            Created 
+            a year ago
+          </small>
+        </div>
+        <div
+          className="text-right col-4"
+        >
+          <div
+            className="form-check"
+          >
+            <input
+              checked={false}
+              className="form-check-input position-static"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card card"
+  >
+    <img
+      className="card-img-top card__image"
+      src="https://rickandmortyapi.com/api/character/avatar/183.jpeg"
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        <a
+          href="/character/183"
+          onClick={[Function]}
+        >
+          Johnny Depp
+        </a>
+      </div>
+      <p
+        className="card-text"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-8"
+        >
+          <small
+            className="text-muted"
+          >
+            Created 
+            a year ago
+          </small>
+        </div>
+        <div
+          className="text-right col-4"
+        >
+          <div
+            className="form-check"
+          >
+            <input
+              checked={false}
+              className="form-check-input position-static"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

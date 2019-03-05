@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="character-detail"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="mb-4 col-sm-12"
+    >
+      <button
+        className="btn btn-light"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Go Back
+      </button>
+    </div>
+    <div
+      className="col-sm-4"
+    >
+      <img
+        className="img-thumbnail"
+        src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      />
+    </div>
+    <div
+      className="col-sm-8"
+    >
+      <h1
+        className="character-detail__page-title mb-3"
+      >
+        Rick Sanchez
+      </h1>
+      <table
+        className="table table-striped table-bordered table-hover"
+      >
+        <tbody>
+          <tr>
+            <td>
+              Status
+            </td>
+            <td>
+              Alive
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Species
+            </td>
+            <td>
+              Human
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Type
+            </td>
+            <td>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gender
+            </td>
+            <td>
+              Male
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Origin
+            </td>
+            <td>
+              Earth
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Location
+            </td>
+            <td>
+              Earth
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Created
+            </td>
+            <td>
+              2017-11-04T18:48:46.250Z
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

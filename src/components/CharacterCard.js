@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import * as moment from 'moment'
+import moment from 'moment'
 import { Row, Col, Card, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { CharacterContext } from './CharacterContext'

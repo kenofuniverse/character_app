@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Container } from 'react-bootstrap'
 import Loader from 'react-loader-spinner'
 import { Row, Col, Image, Table, Button } from 'react-bootstrap'
-import * as moment from 'moment'
+import moment from 'moment'
 import _ from 'lodash'
 
 const CharacterDetail = ({
