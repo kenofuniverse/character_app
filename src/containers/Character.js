@@ -4,7 +4,8 @@ import CharacterDetail from '../components/CharacterDetail'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    detail: state.characterDetail.detail
+    detail: state.characterDetail.detail,
+    isFetching: state.characterDetail.isFetching
   }
 }
 

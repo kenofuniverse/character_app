@@ -5,7 +5,8 @@ import Landing from '../components/Landing'
 const mapStateToProps = (state, ownProps) => {
   return {
     characterList: state.characters.results,
-    pageInfo: state.characters.info
+    pageInfo: state.characters.info,
+    isFetching: state.characters.isFetching,
   }
 }
 

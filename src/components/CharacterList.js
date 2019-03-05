@@ -8,9 +8,9 @@ import CharacterCard from './CharacterCard'
 const CharacterList = ({ items }) => {
   return (
     <CardColumns>
-      { items.map((item, index) => (
+      { items.map(item => (
         <CharacterCard
-          key={index}
+          key={item.id}
           item={item}
         />
       )) }
