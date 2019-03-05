@@ -6,7 +6,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     characterList: state.search.results,
     pageInfo: state.search.info,
-    isFetching: state.search.isFetching
+    isFetching: state.search.isFetching,
+    isError: state.search.isError
   }
 }
 

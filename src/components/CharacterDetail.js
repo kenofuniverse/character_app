@@ -7,11 +7,15 @@ import { Row, Col, Image, Table, Button } from 'react-bootstrap'
 import * as moment from 'moment'
 import _ from 'lodash'
 
-const CharacterDetail = ({ detail, match, history, isFetching, loadDetail }) => {
+const CharacterDetail = ({
+  detail,
+  match,
+  history,
+  isFetching,
+  loadDetail
+}) => {
   if (!match.params.id) {
-    return (
-      <Redirect to='/' />
-    )
+    return <Redirect to="/" />
   }
 
   useEffect(() => {
@@ -22,29 +26,29 @@ const CharacterDetail = ({ detail, match, history, isFetching, loadDetail }) => 
 
   return (
     <div className="character-detail">
-      { isFetching &&
-        <Container className='text-center'>
-          <Loader 
-            className='mt-10'
-            type='Oval'
-            color='#007bff'
-            height='50'	
-            width='50'
+      {isFetching && (
+        <Container className="text-center">
+          <Loader
+            className="mt-10"
+            type="Oval"
+            color="#007bff"
+            height="50"
+            width="50"
           />
         </Container>
-      }
-      { !_.isEmpty(detail) && !isFetching &&
+      )}
+      {!_.isEmpty(detail) && !isFetching && (
         <Row>
           <Col sm={12} className="mb-4">
-            <Button variant="light" onClick={() => history.goBack()}>Go Back</Button>
+            <Button variant="light" onClick={() => history.goBack()}>
+              Go Back
+            </Button>
           </Col>
           <Col sm={4}>
             <Image src={detail.image} thumbnail />
           </Col>
           <Col sm={8}>
-            <h1 className="character-detail__page-title mb-3">
-              {detail.name}
-            </h1>
+            <h1 className="character-detail__page-title mb-3">{detail.name}</h1>
             <Table striped bordered hover>
               <tbody>
                 <tr>
@@ -73,13 +77,13 @@ const CharacterDetail = ({ detail, match, history, isFetching, loadDetail }) => 
                 </tr>
                 <tr>
                   <td>Created</td>
-                  <td>{moment(detail.created).format('MMMM Do YYYY')}</td>
+                  <td>{moment(detail.created).format("MMMM Do YYYY")}</td>
                 </tr>
               </tbody>
             </Table>
           </Col>
         </Row>
-      }
+      )}
     </div>
   )
 }

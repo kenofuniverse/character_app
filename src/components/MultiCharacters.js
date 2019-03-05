@@ -7,17 +7,19 @@ import { Row, Col, Image, Table, Button } from 'react-bootstrap'
 import * as moment from 'moment'
 import _ from 'lodash'
 
-const MultiCharacters = ({ characters, match, history, isFetching, loadDetails }) => {
+const MultiCharacters = ({
+  characters,
+  match,
+  history,
+  isFetching,
+  loadDetails
+}) => {
   if (!match.params.ids) {
-    return (
-      <Redirect to='/' />
-    )
+    return <Redirect to="/" />
   }
-  const ids = match.params.ids.split(',')
+  const ids = match.params.ids.split(",")
   if (ids.length === 1) {
-    return (
-      <Redirect to={`/character/${match.params.ids}`} />
-    )
+    return <Redirect to={`/character/${match.params.ids}`} />
   }
 
   useEffect(() => {
@@ -28,25 +30,28 @@ const MultiCharacters = ({ characters, match, history, isFetching, loadDetails }
 
   return (
     <div className="character-detail">
-      { isFetching &&
-        <Container className='text-center'>
-          <Loader 
-            className='mt-10'
-            type='Oval'
-            color='#007bff'
-            height='50'	
-            width='50'
+      {isFetching && (
+        <Container className="text-center">
+          <Loader
+            className="mt-10"
+            type="Oval"
+            color="#007bff"
+            height="50"
+            width="50"
           />
         </Container>
-      }
+      )}
       <Row>
         <Col sm={12} className="mb-4">
-          <Button variant="light" onClick={() => history.goBack()}>Go Back</Button>
+          <Button variant="light" onClick={() => history.goBack()}>
+            Go Back
+          </Button>
         </Col>
       </Row>
-      { !_.isEmpty(characters) && !isFetching &&
+      {!_.isEmpty(characters) &&
+        !isFetching &&
         characters.map(detail => (
-          <Row>
+          <Row key={detail.id}>
             <Col sm={4}>
               <Image src={detail.image} thumbnail />
             </Col>
@@ -82,7 +87,7 @@ const MultiCharacters = ({ characters, match, history, isFetching, loadDetails }
                   </tr>
                   <tr>
                     <td>Created</td>
-                    <td>{moment(detail.created).format('MMMM Do YYYY')}</td>
+                    <td>{moment(detail.created).format("MMMM Do YYYY")}</td>
                   </tr>
                 </tbody>
               </Table>
@@ -91,8 +96,7 @@ const MultiCharacters = ({ characters, match, history, isFetching, loadDetails }
               <hr />
             </Col>
           </Row>
-        ))
-      }
+        ))}
     </div>
   )
 }
@@ -102,7 +106,7 @@ MultiCharacters.defaultProps = {
 }
 
 MultiCharacters.propTypes = {
-  characters: PropTypes.object,
+  characters: PropTypes.array,
   match: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
   isFetching: PropTypes.bool.isRequired,

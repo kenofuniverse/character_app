@@ -12,7 +12,8 @@ const Routes = () => (
       <Route path="/character/:id" component={CharacterContainer} />
       <Route path="/characters/:ids" component={MultiCharactersContainer} />
       <Route path="/search/:keyword" component={SearchContainer} />
-      <Route exact path="/" component={LandingContainer} />
+      <Route path="/:page" component={LandingContainer} />
+      <Route path="/" component={LandingContainer} />
     </Switch>
   </Layout>
 )

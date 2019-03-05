@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     characterList: state.characters.results,
     pageInfo: state.characters.info,
     isFetching: state.characters.isFetching,
+    isError: state.characters.isError
   }
 }
 

@@ -7,18 +7,15 @@ import '../styles/layout.scss'
 
 const Layout = ({ title, children }) => (
   <div className="layout">
-    <Header/>
-    <Container className="layout__container">
-      
-      {children}
-    </Container>
+    <Header />
+    <Container className="layout__container">{children}</Container>
     {/* <Footer /> */}
   </div>
 )
 
 Layout.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.any,
+  children: PropTypes.any
 }
 
 export default Layout
