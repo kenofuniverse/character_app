@@ -1,9 +1,11 @@
 import React from 'react'
+import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 import { MemoryRouter } from 'react-router';
+import CharacterCard from '../CharacterCard'
 import CharacterList from '../CharacterList'
 
-it('renders correctly', () => {
+describe('CharacterDetail component', () => {
   const items = [
     {
       "id": 1,
@@ -52,12 +54,20 @@ it('renders correctly', () => {
       "created": "2017-12-29T18:51:29.693Z"
     }
   ]
-  const tree = renderer
-    .create(
-      <MemoryRouter>
-        <CharacterList items={items} />
-      </MemoryRouter>
-    )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
+
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <MemoryRouter>
+          <CharacterList items={items} />
+        </MemoryRouter>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders contents correctly', () => {
+    const wrapper = shallow(<CharacterList items={items} />)
+    expect(wrapper.find(CharacterCard)).toHaveLength(items.length)
+  })
 })

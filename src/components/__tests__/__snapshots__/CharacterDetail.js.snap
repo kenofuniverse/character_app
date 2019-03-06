@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`CharacterDetail component renders correctly 1`] = `
 <div
   className="character-detail"
 >
@@ -92,7 +92,7 @@ exports[`renders correctly 1`] = `
               Created
             </td>
             <td>
-              2017-11-04T18:48:46.250Z
+              November 5th 2017
             </td>
           </tr>
         </tbody>

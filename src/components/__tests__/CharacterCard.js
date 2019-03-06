@@ -1,9 +1,10 @@
 import React from 'react'
+import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 import { MemoryRouter } from 'react-router';
 import CharacterCard from '../CharacterCard'
 
-it('renders correctly', () => {
+describe('CharacterCard component', () => {
   const item = {
     "id": 2,
     "name": "Morty Smith",
@@ -14,12 +15,21 @@ it('renders correctly', () => {
     "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
     "created": "2017-11-04T18:50:21.651Z"
   }
-  const tree = renderer
-    .create(
-      <MemoryRouter>
-        <CharacterCard item={item} />
-      </MemoryRouter>
-    )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
+
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <MemoryRouter>
+          <CharacterCard item={item} />
+        </MemoryRouter>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('render contents correctly', () => {
+    const rendered = shallow(<MemoryRouter><CharacterCard item={item} /></MemoryRouter>)
+    expect(rendered.html()).toContain(item.name)
+    expect(rendered.html()).toContain(item.image)
+  })
 })
