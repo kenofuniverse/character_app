@@ -20,7 +20,7 @@ describe('CharacterCard component', () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <CharacterCard item={item} />
+          <CharacterCard item={item} onSelectItem={() => {}}/>
         </MemoryRouter>
       )
       .toJSON()
@@ -28,7 +28,7 @@ describe('CharacterCard component', () => {
   })
 
   it('render contents correctly', () => {
-    const rendered = shallow(<MemoryRouter><CharacterCard item={item} /></MemoryRouter>)
+    const rendered = shallow(<MemoryRouter><CharacterCard item={item} onSelectItem={() => {}} /></MemoryRouter>)
     expect(rendered.html()).toContain(item.name)
     expect(rendered.html()).toContain(item.image)
   })
